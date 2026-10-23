@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCTWISH</title>
+  <link rel="icon" href="./img/logo_favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/notice.css">
+  <link rel="stylesheet" href="css/mobile.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+  <script src="script/js.js" defer></script>
+  <script src="script/mobile.js" defer></script>
+  <script src="script/notice.js" defer></script>
+</head>
+
+<body>
+  <!-- 배너 -->
+  <div class="banner">
+    <div class="banner_wrap">
+      <p class="ban_txt">
+        NCT WISH 1st CONCERT TOUR<br>
+        INTO THE WISH : Our WISH
+      </p>
+      <p class="ban_txt">
+        NCT WISH 1st CONCERT TOUR<br>
+        INTO THE WISH : Our WISH
+      </p>
+      <p class="ban_txt only_m">
+        NCT WISH 1st CONCERT TOUR<br>
+        INTO THE WISH : Our WISH
+      </p>
+      <p class="ban_txt only_m">
+        NCT WISH 1st CONCERT TOUR<br>
+        INTO THE WISH : Our WISH
+      </p>
+      <p class="ban_txt only_m">
+        NCT WISH 1st CONCERT TOUR<br>
+        INTO THE WISH : Our WISH
+      </p>
+      <p class="ban_txt only_m">
+        NCT WISH 1st CONCERT TOUR<br>
+        INTO THE WISH : Our WISH
+      </p>
+    </div>
+  </div>
+  <!-- 전체 페이지, 맨밑 헤더, 배너 제외 -->
+  <div class="page">     <!-- 흐르는 배너용. 얘한테 패딩레프트 줄 예정 -->
+    <main>
+      <div class="main_wrap">
+        <div class="logo_wrap">
+          <a href="#">
+            <img src="img/logo.svg" alt="logo">
+          </a>
+        </div>
+
+        <div class="desc_wrap">
+          <span class="spy">I SPY</span>
+          <span class="sub">The 4th Mini Album</span>
+        </div>
+
+        <div class="play">
+          <a href="#" class="play_btn">
+            <img src="img/play.png" alt="뮤직비디오 재생">
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- 뮤직비디오 모달 -->
+    <div class="video_modal" role="dialog" aria-modal="true"
+        aria-label="뮤직비디오" hidden>
+      <div class="video_box">
+        <button type="button" class="close_btn" aria-label="닫기">
+          &times;
+        </button>
+
+        <div class="video_wrap">
+          <iframe
+            title="NCT WISH 뮤직비디오"
+            src=""
+            allow="autoplay; encrypted-media; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- sec01 -->
+    <section class="sec01">
+      <h2 class="about_tit">PROFILE</h2>
+      <div class="sec01_wrap">
+        <p>NCT WISH··· NCT 127, NCT DREAM, WayV에 이은, 마지막 NCT라고 불리며, 2023년 7월~9월에 걸쳐 방송된 프리 데뷔 리얼리티 프로그램 'NCT U niverse : LASTART'를 통해 결성된 6인조 그룹 NCT NEW TEAM(가). 프리뷰 기간을 거쳐 2024년 1월 18일, 그룹명을 새롭게【NCT WISH】로서 정식 발표. 'WISH for Our WISH'라는 캐치프레이즈 아래 '음악과 사랑으로 모두의 소원과 꿈을 응원한다'는 생각이 담겨 있다.
+            2024년 2월 21일 ‘WISH’에서 한일 동시 데뷔.</p>
+      </div>
+    </section>
+
+    <section class="sec02">
+      <div class="member_wrap">
+        <!-- <h2>PROFILE</h2> -->
+        <div class="only_m">
+          <ul>
+            <li><a href="#" data-member="sion">si</a></li>
+            <li><a href="#" data-member="riku">ri</a></li>
+            <li><a href="#" data-member="yushi" class="active">yu</a></li>
+            <li><a href="#" data-member="jaehee">ja</a></li>
+            <li><a href="#" data-member="ryo">ry</a></li>
+            <li><a href="#" data-member="sakuya">sa</a></li>
+          </ul>
+        </div>
+        <div class="member_list">
+          <ul>
+            <li><a href="#" data-member="sion">SION</a></li>
+            <li><a href="#" data-member="riku">RIKU</a></li>
+            <li class="on"><a href="#" data-member="yushi">YUSHI</a></li>
+            <li><a href="#" data-member="jaehee">JAEHEE</a></li>
+            <li><a href="#" data-member="ryo">RYO</a></li>
+            <li><a href="#" data-member="sakuya">SAKUYA</a></li>
+          </ul>
+        </div>
+
+        <div class="member_body">
+          <div class="member">
+            <img id="member_img" src="img/yu.avif" alt="YUSHI">
+            <div class="member_count"><span id="mc_now">3</span> / <span id="mc_total">6</span></div>
+          </div>
+          <div class="member_info">
+            <p class="member_name" id="member_name">YUSHI</p>
+            <ul class="info_rows">
+              <li><span>BIRTH</span><span id="member_birth">2004.4.5</span></li>
+              <li><span>COLOR</span><span><i class="dot"></i><b id="id_color">BLUE</b></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="member_dots"></div>
+      </div>
+    </section>
+
+    <!-- ===== DISCOGRAPHY ===== -->
+    <section class="discography" id="discography">
+      <div class="dg_head">
+        <h2>DISCOGRAPHY</h2>
+        <div class="dg_nav">
+          <button type="button" class="dg_btn dg_prev" aria-label="이전 앨범"></button>
+          <button type="button" class="dg_btn dg_next" aria-label="다음 앨범"></button>
+        </div>
+      </div>
+
+      <div class="dg_panel">
+        <h2 class="only_m">DISCOGRAPHY</h2>
+        <span class="dg_count"><span class="dg_now">1</span> / <span class="dg_total">9</span></span>
+        <div class="dg_stage">
+          <div class="dg_vinyl">
+            <div class="dg_rec"></div>
+            <img class="dg_cover" src="img/cover01.webp" alt="" draggable="false" />
+          </div>
+        </div>
+
+        <div class="dg_info" aria-live="polite">
+          <span class="dg_tag"></span>
+          <p class="dg_title"></p>
+          <p class="dg_meta">NCT WISH · <span class="dg_date"></span></p>
+          <div class="dg_links">
+            <a class="dg_listen" href="https://nctwish.lnk.to/ISPY" rel="noopener">LISTEN</a>
+            <button type="button" class="dg_tracks_btn" aria-expanded="false">TRACKS</button>
+          </div>
+          <ol class="dg_tracklist" hidden></ol>
+        </div>
+
+        <div class="dg_bars" role="group" aria-label="앨범 선택"></div>
+      </div>
+    </section>
+
+    <!-- sec04 -->
+    <section class="sec04">
+      <div class="sec04_wrap">
+        <h2>VIDEO</h2>
+        <figure>
+          <a href="#" data-video="https://www.youtube.com/embed/OwgvFefFAVA">
+            <img src="img/youtube01.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/OHbmQBrr0GY">
+            <img src="img/youtube02.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/VBi5b2FykFk">
+            <img src="img/youtube03.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/Dnmyrk0uxI">
+            <img src="img/youtube04.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/AF0WZIOwoIQ">
+            <img src="img/youtube05.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/lw9JQxd8HP0">
+            <img src="img/youtube06.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/fk02gI0beps">
+            <img src="img/youtube07.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/sB2sJZHeICg">
+            <img src="img/youtube08.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/j3K8WHE9Wr0">
+            <img src="img/youtube09.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/saQl5Bv0bzA" class="only_t">
+            <img src="img/youtube10.avif" alt="">
+          </a>
+        </figure>
+
+        <figure class="video_extra">
+          <a href="#" data-video="https://www.youtube.com/embed/aJZqwQMVUl8">
+            <img src="img/youtube11.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/fW9FIMmQSxU">
+            <img src="img/youtube12.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/ltHhVXx0KNQ">
+            <img src="img/youtube13.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/pIBdNXCzgXQ">
+            <img src="img/youtube14.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/ZyJJZv_wbv8">
+            <img src="img/youtube15.avif" alt="">
+          </a>
+          <a href="#" data-video="https://www.youtube.com/embed/ppWsCDib_DU">
+            <img src="img/youtube16.avif" alt="">
+          </a>
+        </figure>
+
+        <div class="video_bottom">
+          <div class="video_more">
+            <a href="#" class="moreBtn">more +</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 유튜브 영상 모달 -->
+    <div class="youtube_modal" hidden>
+      <div class="youtube_box">
+
+        <button type="button" class="youtube_close">&times;</button>
+
+        <div class="youtube_wrap">
+          <iframe
+            src=""
+            allow="autoplay; encrypted-media; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- sec05 -->
+    <section class="sec05">
+      <div class="sec05_wrap">
+        <h2>NOTICE</h2>
+
+        <div id="notice_list"></div>
+
+        <div class="paging" id="notice_paging"></div>
+      </div>
+    </section>
+
+    <!-- 클릭시 공지 모달팝업 -->
+    <div class="notice_modal" hidden>
+      <div class="ticket_wrap">
+        <div class="ticket" role="dialog" aria-modal="true" aria-labelledby="ticket_title">
+          <div class="ticket_main">
+            <p class="ticket_label">NCT WISH · NOTICE</p>
+            <h3 class="ticket_title" id="ticket_title"></h3>
+            <p class="ticket_sum"></p>
+            <a class="ticket_btn" href="#" target="_blank" rel="noopener noreferrer">
+              Weverse에서 공지 보기
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12L12 4M5 4h7v7"/></svg>
+            </a>
+          </div>
+          <div class="ticket_stub">
+            <span class="stub_year"></span>
+            <span class="stub_date"></span>
+            <span class="stub_day"></span>
+            <i class="stub_bar" aria-hidden="true"></i>
+            <span class="stub_no"></span>
+          </div>
+        </div>
+        <button type="button" class="ticket_close" aria-label="닫기">&times;</button>
+      </div>
+    </div>
+
+    <!-- sec06 -->
+    <section class="sec06">
+      <div class="sec06_wrap">
+        <h2>GALLERY</h2>
+
+        <div class="sec06_cols">
+          <div class="sec06_left">
+            <figure data-name="SION">
+              <img src="img/sion.jpeg" alt="시온">
+              <span class="more">+ more photos</span>
+            </figure>
+
+            <figure data-name="RIKU">
+              <img src="img/riku.jpeg" alt="리쿠">
+              <span class="more">+ more photos</span>
+            </figure>
+
+            <figure data-name="SAKUYA">
+              <img src="img/sakuya.jpeg" alt="사쿠야">
+              <span class="more">+ more photos</span>
+            </figure>
+          </div>
+
+          <div class="sec06_right">
+            <figure data-name="YUSHI">
+              <img src="img/yushi.jpeg" alt="유우시">
+              <span class="more">+ more photos</span>
+            </figure>
+
+            <figure data-name="RYO">
+              <img src="img/ryo.jpeg" alt="료">
+              <span class="more">+ more photos</span>
+            </figure>
+
+            <figure data-name="JAEHEE">
+              <img src="img/jaehee.jpeg" alt="재희">
+              <span class="more">+ more photos</span>
+            </figure>
+          </div>
+        </div>
+        <div class="wichu">
+          <img src="img/wichu.png" alt="">
+        </div>
+        <div class="sec06_txt">
+          <p>The WISH's complete</p>
+        </div>
+      </div>
+    </section>
+
+
+
+  <!-- 맨 밑 헤더 -->
+  <div class="gnb">
+    <div class="gnb_wrap">
+      <div class="sns">
+        <a href="https://www.facebook.com/NCTWISH.smtown" target="_blank" rel="noopener noreferrer">
+          <img src="img/sns_facebook.png" alt="">
+        </a>
+        <a href="https://www.instagram.com/nctwish_official" target="_blank" rel="noopener noreferrer">
+          <img src="img/sns_instagram.png" alt="">
+        </a>
+        <a href="https://x.com/nctwishofficial" target="_blank" rel="noopener noreferrer">
+          <img src="img/sns_twitter.png" alt="">
+        </a>
+        <a href="https://www.youtube.com/@NCTWISH" target="_blank" rel="noopener noreferrer">
+          <img src="img/sns_youtube.png" alt="">
+        </a>
+      </div>
+      <div class="gnb_logo">
+        <a href="#"><img src="img/wish_logo3.png" alt=""></a>
+      </div>
+      <div class="hamburger">
+        <button type="button">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- gnb 헤더 메뉴 팝업 -->
+  <nav class="menu_modal" aria-hidden="true">
+    <ul class="menu_list">
+      <li><a href="#" data-target=".sec01"><span>01</span>PROFILE</a></li>
+      <li><a href="#" data-target=".discography"><span>02</span>DISCOGRAPHY</a></li>
+      <li><a href="#" data-target=".sec04"><span>03</span>VIDEO</a></li>
+      <li><a href="#" data-target=".sec05"><span>04</span>NOTICE</a></li>
+      <li><a href="#" data-target=".sec06"><span>05</span>GALLERY</a></li>
+    </ul>
+    <div class="sns_mob">
+      <a href="https://www.facebook.com/NCTWISH.smtown" target="_blank" rel="noopener noreferrer">
+        <img src="img/sns_facebook.png" alt="">
+      </a>
+      <a href="https://www.instagram.com/nctwish_official" target="_blank" rel="noopener noreferrer">
+        <img src="img/sns_instagram.png" alt="">
+      </a>
+      <a href="https://x.com/nctwishofficial" target="_blank" rel="noopener noreferrer">
+        <img src="img/sns_twitter.png" alt="">
+      </a>
+      <a href="https://www.youtube.com/@NCTWISH" target="_blank" rel="noopener noreferrer">
+        <img src="img/sns_youtube.png" alt="">
+      </a>
+    </div>
+    <div>
+      <p class="menu_info">NCT WISH 【I SPY - The 4th Mini Album】 2026.10.12 6PM (KST)</p>
+    </div>
+  </nav>
+
+  <!-- 6번 갤러리 모달  -->
+  <div class="gmodal" id="gmodal">
+    <div class="gmodal_inner">
+      <header class="gmodal_head">
+        <h3 class="gmodal_name"></h3>
+        <button type="button" class="gmodal_close" aria-label="닫기">✕</button>
+      </header>
+      <div class="gmodal_grid"></div>
+    </div>
+  </div>
+
+  <div class="glightbox" id="glightbox">
+    <div class="glightbox_box">
+      <img src="" alt="">
+      <button type="button" class="glightbox_close" aria-label="닫기">✕</button>
+    </div>
+  </div>
+</body>
+</html>

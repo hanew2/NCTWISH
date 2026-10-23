@@ -1,0 +1,61 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+:root {
+  --color-main: #BBE308;
+  --color-gray: #4A4A4A;
+  --color-accent: #429ce0;
+}
+
+:root {
+  --gnb-h: 70px;
+}
+
+.full {
+  min-height: 100vh;
+  padding-bottom: var(--gnb-h);   /* gnb에 가려지는 만큼 보정 */
+  box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;  /* 추가 */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 추가 */
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+*::before, *::after { box-sizing: border-box; }
