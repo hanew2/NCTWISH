@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+body.modal_open { overflow: hidden; }
+
+.notice_modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: rgba(20, 20, 20, 0.72);
+}
+.notice_modal[hidden] { display: none; }
+
+.ticket_wrap { position: relative; width: min(900px, 100%); }
+
+/* ---------- 티켓 (가로형) ---------- */
+.ticket {
+  --stub: 260px;
+  --r: 18px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr var(--stub);
+  min-height: 380px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  background: linear-gradient(90deg, #fff calc(100% - var(--stub)), #bbe308 calc(100% - var(--stub)));
+  background-origin: border-box;
+  -webkit-mask:
+    radial-gradient(circle var(--r) at calc(100% - var(--stub)) 0, #0000 calc(var(--r) - 1px), #000 var(--r)),
+    radial-gradient(circle var(--r) at calc(100% - var(--stub)) 100%, #0000 calc(var(--r) - 1px), #000 var(--r));
+  -webkit-mask-composite: source-in;
+  mask:
+    radial-gradient(circle var(--r) at calc(100% - var(--stub)) 0, #0000 calc(var(--r) - 1px), #000 var(--r)),
+    radial-gradient(circle var(--r) at calc(100% - var(--stub)) 100%, #0000 calc(var(--r) - 1px), #000 var(--r));
+  mask-composite: intersect;
+  color: #000;
+  animation: ticketIn 0.45s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+@keyframes ticketIn {
+  from { transform: translateX(60px) rotate(3deg); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+.ticket_main { display: flex; flex-direction: column; padding: 40px 48px; }
+.ticket_label {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  letter-spacing: 4px;
+}
+.ticket_title {
+  margin: 18px 0 16px;
+  font-family: var(--font-body2);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  word-break: keep-all;
+}
+.ticket_sum { margin: 0 0 28px; font-size: 16px; line-height: 28px; color: #111; font-family: var(--font-body2);}
+
+/* Weverse 버튼 */
+.ticket_btn {
+  margin-top: auto;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 26px;
+  border: 1px solid #000;
+  border-radius: 24px;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-body2);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+.ticket_btn svg { stroke: #bbe308; transition: stroke 0.3s; }
+.ticket_btn:hover { background: #bbe308; color: #000; }
+.ticket_btn:hover svg { stroke: #000; }
+
+/* 오른쪽 스텁 */
+.ticket_stub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 3px dashed #000;
+  font-family: var(--font-body);
+}
+.stub_year { font-size: 16px; }
+.stub_date { font-family: var(--font-main); font-size: 64px; line-height: 1.1; }
+.stub_day  { margin-bottom: 22px; font-size: 20px; }
+.stub_bar {
+  display: block;
+  width: 160px;
+  height: 60px;
+  background: repeating-linear-gradient(90deg, #000 0 3px, transparent 3px 6px, #000 6px 8px, transparent 8px 12px);
+}
+.stub_no { margin-top: 8px; font-size: 12px; }
+
+/* 닫기 버튼 */
+.ticket_close {
+  position: absolute;
+  top: -32px;
+  right: -32px;
+  width: 64px;
+  height: 64px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-family: var(--font-body);
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.ticket_close:hover { background: #bbe308; }
+.ticket_btn:focus-visible,
+.ticket_close:focus-visible { outline: 3px solid #4a4a4a; outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket { animation: none; }
+}
+
+
+/* ===== 큰 모니터 (1600~) ===== */
+@media (min-width: 1600px) {
+  .ticket_wrap { width: min(1000px, 100%); }
+  .ticket_title { font-size: 32px; line-height: 44px; }
+  .ticket_sum { font-size: 17px; }
+}
+
+
+/* ===== 태블릿 (744 ~ 1023) ===== */
+@media (max-width: 1023px) {
+  .notice_modal { padding: 80px 20px 40px; }
+  .ticket { --stub: 220px; min-height: 340px; }
+  .ticket_main { padding: 32px 36px; }
+  .ticket_title { font-size: 24px; line-height: 34px; }
+  .stub_date { font-size: 52px; }
+  .stub_bar { width: 140px; }
+  .ticket_close { top: -60px; right: 0; width: 48px; height: 48px; font-size: 28px; }
+}
+
+
+/* ===== 모바일 (~743) : 세로 티켓 (위 스텁 / 아래 본문) ===== */
+@media (max-width: 743px) {
+  .ticket_wrap { width: min(420px, 100%); }
+  .ticket {
+    --stubh: 84px;
+    --r: 14px;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--stubh) auto;
+    min-height: 0;
+    background: linear-gradient(180deg, #bbe308 var(--stubh), #fff var(--stubh));
+    -webkit-mask:
+      radial-gradient(circle var(--r) at 0 var(--stubh), #0000 calc(var(--r) - 1px), #000 var(--r)),
+      radial-gradient(circle var(--r) at 100% var(--stubh), #0000 calc(var(--r) - 1px), #000 var(--r));
+    -webkit-mask-composite: source-in;
+    mask:
+      radial-gradient(circle var(--r) at 0 var(--stubh), #0000 calc(var(--r) - 1px), #000 var(--r)),
+      radial-gradient(circle var(--r) at 100% var(--stubh), #0000 calc(var(--r) - 1px), #000 var(--r));
+    mask-composite: intersect;
+  }
+  .ticket_stub {
+    order: -1;
+    flex-direction: row;
+    gap: 12px;
+    border-left: 0;
+    border-bottom: 3px dashed #000;
+  }
+  .stub_year { font-size: 13px; }
+  .stub_date { font-size: 36px; }
+  .stub_day  { margin: 0; font-size: 14px; }
+  .stub_bar,
+  .stub_no { display: none; }
+
+  .ticket_main { padding: 28px 24px; }
+  .ticket_title { margin: 14px 0 12px; font-size: 21px; line-height: 30px; }
+  .ticket_sum { margin-bottom: 24px; font-size: 14px; line-height: 24px; }
+  .ticket_btn { align-self: stretch; justify-content: center; margin-top: 0; padding: 14px 16px; }
+}
