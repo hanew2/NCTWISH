@@ -215,7 +215,7 @@
   .gnb .gnb_logo img {
     position: static;
     transform: none;
-    width: 60px;
+    width: 80px;
     filter: brightness(0) invert(0.3);
     transition: filter 0.3s
   }
