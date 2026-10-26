@@ -1,0 +1,471 @@
+@charset "UTF-8";
+
+/* 태블릿 전용 10번째 썸네일 (PC/모바일에서는 숨김) */
+.sec04 figure a.only_t {
+  display: none;
+}
+
+/* 폴라로이드 프레임 */
+.sec06_cols figure {
+  padding: 24px 24px 60px;
+}
+.sec06_left,
+.sec06_right {
+  gap: 50px;
+}
+
+/* ===== 노트북 (1240 ~ 1599) : 맥북에어 13/14인치 포함 ===== */
+@media (max-width: 1599px) {
+  .banner {
+    width: 100px;
+  }
+  .ban_txt {
+    font-size: 26px;
+    padding: 80px 0;
+    text-align: center;
+    height: 800px;
+  }
+  .page {
+    padding-left: 100px;
+  }
+  .gnb,
+  .gnb.on {
+    padding-left: 100px;
+  }
+
+  .sns img {
+    width: 45px;
+  }
+}
+
+/* sec06 제목 왼쪽 잘림 방지 */
+@media (max-width: 1321px) {
+  .sec06_wrap h2 {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1239px) {
+  main {
+    height: 100vh;
+    height: 100svh;
+    background: url("../img/main01.jpeg") calc(50% + 0) 100% / cover no-repeat
+      scroll;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1101px) and (max-width: 1200px) {
+  main {
+    background: url("../img/main02.jpg") 30% center / cover no-repeat scroll;
+  }
+}
+
+/* ===== 소형 데스크탑 (1239) ===== */
+@media (max-width: 1239px) {
+  .hamburger {
+    height: 70px;
+    width: 70px;
+    margin: 0 20px 0 auto;
+  }
+  .hamburger span {
+    width: 60px;
+  }
+
+  /* sec02 ~ */
+  .sec01 h2,
+  .sec04_wrap h2,
+  .discography .dg_head h2, 
+  .sec05_wrap h2 {
+    font-size: 68px;
+  }
+  .sec06_wrap {
+    padding: 40px;
+  }
+  .sec06_wrap h2 {
+    font-size: 90px;
+  }
+  .sec06_txt p {
+    font-size: 50px;
+    padding-bottom: 40px;
+  }
+
+  .member_wrap {
+    padding: 0 40px;
+  }
+  .member_body {
+    grid-template-columns: 340px 1fr;
+    gap: 48px;
+  }
+  .member_info {
+    width: 100%;
+    max-width: 420px;
+  }
+  .member_name {
+    font-size: 64px;
+    margin-bottom: 28px;
+  }
+  .info_rows li {
+    font-size: 20px;
+  }
+
+  .sec04_wrap h2 {
+    padding: 24px 24px 34px;
+  }
+
+  .sec05_wrap article a {
+    padding: 24px 50px;
+  }
+  .sec06_cols {
+    gap: 0;
+  }
+  .discography .dg_head h2 {
+    font-size: 68px;
+  }
+  .dg_panel {
+    padding: 56px 56px 80px;
+  }
+}
+
+/* ===== 상단 띠 가로 흐름 ===== */
+@keyframes flowX {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== 태블릿 (744 ~ 1100) ===== */
+@media (max-width: 1100px) {
+  main {
+    background: url("../img/main02.jpg") 30% center / cover no-repeat scroll;
+    height: calc(100vh - 54px);
+    height: calc(100svh - 54px);
+  }
+
+  .desc_wrap {
+    top: 80%;
+    left: 5%;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+  }
+  .logo_wrap img {
+    margin: 20px;
+    width: 180px;
+  }
+
+  .main_wrap::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  }
+
+  .play {
+    top: auto;
+    bottom: 10%;
+    right: 5%;
+    left: auto;
+    z-index: 2;
+  }
+  .play img {
+    width: 40px;
+  }
+  .banner {
+    width: 100%;
+    height: 54px;
+  }
+  .banner_wrap {
+    display: flex;
+    width: max-content;
+    animation: flowX 30s linear infinite;
+  }
+  .ban_txt,
+  .ban_txt.only_m {
+    display: flex;
+    align-items: center;
+    transform: none;
+    height: 54px;
+    padding: 0 40px 2px;
+    font-size: 18px;
+    line-height: 21px;
+    word-spacing: 0;
+  }
+
+  .page {
+    padding-left: 0;
+    padding-top: 54px;
+  }
+  
+  /* 스크롤 300px 이후의 스타일 */
+  .gnb.on {
+    top: 54px;           /* 배너(54px) 바로 아래 */
+    bottom: auto;        /* 아래 고정 해제 (중요) */
+    height: 50px;
+    background: transparent;
+    opacity: 1;
+    display: block;
+    padding-left: 20px;
+  }
+  
+  .gnb .gnb_logo img {
+    position: static;
+    transform: none;
+    width: 60px;
+    filter: brightness(0) invert(0.3);
+    transition: filter 0.3s
+  }
+
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+  .hamburger span {
+    width: 40px;
+    background: #4d4d4d;
+    border-radius: 0;
+  }
+  .hamburger button {
+    gap: 8px;
+  }
+
+  .gnb_wrap .sns {display: none;}
+
+  .desc_wrap .sub {
+    font-size: 14px;
+  }
+  .spy {
+    font-size: 55px;
+  }
+
+  /* 메뉴가 열렸을 때*/
+  .hamburger button.on span {
+    background: #fff;
+  }
+  .menu_open .gnb .gnb_logo img {
+    filter: brightness(0) invert(1);
+  }
+
+  .sns_mob {
+    display: flex;
+    margin: 30px 0 0;
+  }
+  .sns_mob img {
+    width: 35px;
+  }
+
+
+  /* sec02 */
+  .sec02 {
+    padding: 0 0 50px 0;
+  }
+  .member_wrap {
+    padding: 0 32px;
+  }
+  .member_list ul {
+    justify-content: center;
+  }
+  .member_list a {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+  .member_body {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .member:hover {
+    transform: none;
+  }
+  .member {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .member_info {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    text-align: center;
+  }
+  .member_name {
+    font-size: 72px;
+    margin-left: 0;
+  }
+
+  /* sec03 */
+  .discography .dg_head h2 {font-size: 50px;}
+  .dg_head {
+    padding: 48px 0 24px;
+  }
+  .dg_panel {
+    padding: 60px 44px 60px;
+  }
+  .dg_links {
+    margin-top: 26px;
+  }
+  .dg_info {
+    padding-top: 50px;
+  }
+  .dg_tracks_btn,
+  .dg_listen {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  /* sec04 - VIDEO: 2열 */
+  .sec04 figure {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec04 figure a.only_t {
+    display: block;
+  }
+  .sec04 .video_extra {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec04 figure a {
+    opacity: 1;
+  }
+
+
+  /* sec05 */
+  .sec05_wrap p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    overflow: hidden;
+  }
+
+  /* 메뉴 팝업 */
+  .menu_modal {
+    inset: 54px 0 0 0; /* 위 56px 배너 띠를 남기고 전체 덮음 */
+    padding: 0 32px 70px;
+  }
+  .menu_info {
+    left: 32px;
+  }
+  .menu_list a {
+    font-size: clamp(36px, 8vw, 72px);
+  }
+  .hamburger button.on span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  } /* gap 8px */
+  .hamburger button.on span:nth-child(2) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* sec06 */
+  .sec06 {
+    padding-top: 60px;
+  }
+  .sec06_wrap {
+    padding: 60px 54px;
+  }
+  .sec06_wrap h2 {
+    font-size: 72px;
+  }
+  .sec06_cols {
+    gap: 0;
+  }
+  .sec06_left,
+  .sec06_right {
+    gap: 20px;
+  }
+
+  .sec06_txt p {
+    font-size: 40px;
+  }
+
+  /* 폴라로이드 프레임 */
+  .sec06_cols figure {
+    padding: 20px 20px 50px;
+  }
+  .sec06_left,
+  .sec06_right {
+    gap: 40px;
+  }
+  /* data-name 이름표 */
+  .sec06_cols figure::before {
+    font-size: 11px;
+    bottom: 14px;
+    left: 20px;
+    padding: 4px 8px;
+  }
+  /* 별 스티커 공통 */
+  .sec06_left figure:nth-child(1)::after,
+  .sec06_left figure:nth-child(3)::after,
+  .sec06_right figure:nth-child(3)::after {
+    width: 44px;
+  }
+
+  .sec06_cols figure:hover {
+    transform: none;
+    box-shadow:
+      0 4px 8px rgba(60, 48, 35, 0.06),
+      0 14px 28px rgba(60, 48, 35, 0.14);
+  }
+  .sec06_cols figure .more {
+    bottom: 14px;
+    font-size: 14px;
+  }
+
+  /* 갤러리 모달 */
+  .gmodal_inner {
+    width: 82vw;
+  }
+  .gmodal_name {
+    font-size: 24px;
+  }
+  .gmodal_close {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gmodal_grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: min(75vh, 70vw);
+    gap: 10px;
+  }
+  /* 모달 사진들 */
+  .gmodal_grid .item:nth-child(1) {
+    grid-area: 1 / 1 / 4 / 3;
+  }
+  .gmodal_grid .item:nth-child(2) {
+    grid-area: 1 / 3 / 3 / 5;
+  }
+  .gmodal_grid .item:nth-child(3) {
+    grid-area: 1 / 5 / 3 / 7;
+  }
+  .gmodal_grid .item:nth-child(4) {
+    grid-area: 3 / 3 / 4 / 5;
+  }
+  .gmodal_grid .item:nth-child(5) {
+    grid-area: 3 / 5 / 6 / 7;
+  }
+  .gmodal_grid .item:nth-child(6) {
+    grid-area: 4 / 1 / 6 / 2;
+  }
+  .gmodal_grid .item:nth-child(7) {
+    grid-area: 4 / 2 / 6 / 4;
+  }
+  .gmodal_grid .item:nth-child(8) {
+    grid-area: 4 / 4 / 5 / 5;
+  }
+  .gmodal_grid .item:nth-child(9) {
+    grid-area: 5 / 4 / 6 / 5;
+  }
+  .gmodal_grid .item:nth-child(n + 10) {
+    display: none;
+  }
+  .gmodal_grid .item {
+    padding: 5px;
+  }
+  .gmodal_grid .item img {
+    height: 100%;
+    object-position: center 20%;
+  }
+}
