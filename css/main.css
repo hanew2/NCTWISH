@@ -1,6 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Dela+Gothic+One&display=swap");
-@import url("https://db.onlinewebfonts.com/c/2c49c30acea579420e9406fccc391d55?family=Jheri+Curls");
+/* @import url("https://db.onlinewebfonts.com/c/2c49c30acea579420e9406fccc391d55?family=Jheri+Curls"); */
+
+@font-face {
+  font-family: "Jheri Curls";
+  src: url("fonts/JheriCurls.woff2") format("woff2");
+}
 
 @font-face {
   font-family: "PartialSans";
